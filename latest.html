@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AI 智能体开始自己找工具、自己部署，但也更容易泄密了</title>
+  <style>
+    :root { color-scheme: light; --ink: #17201b; --muted: #5f6b64; --line: #d9e0dc; --accent: #087f5b; --surface: #ffffff; --wash: #f3f6f4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--wash); color: var(--ink); font-family: system-ui, -apple-system, "Noto Sans SC", "Microsoft YaHei", sans-serif; letter-spacing: 0; }
+    .toolbar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
+    .toolbar strong { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; }
+    button { flex: 0 0 auto; min-height: 42px; padding: 0 14px; border: 0; border-radius: 6px; background: var(--accent); color: #fff; font-size: 15px; font-weight: 650; cursor: pointer; }
+    button:focus-visible { outline: 3px solid #9de2ca; outline-offset: 2px; }
+    .status { min-height: 24px; padding: 6px 16px 0; color: var(--muted); font-size: 13px; text-align: center; }
+    main { width: min(100%, 760px); margin: 0 auto; padding: 12px; }
+    article { padding: 22px 18px 36px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; line-height: 1.78; overflow-wrap: anywhere; }
+    h1 { margin: 0 0 20px; font-size: 25px; line-height: 1.35; }
+    h2 { margin: 30px 0 12px; padding-left: 10px; border-left: 4px solid var(--accent); font-size: 20px; line-height: 1.4; }
+    h3 { margin: 24px 0 10px; font-size: 18px; line-height: 1.45; }
+    p, li { font-size: 16px; }
+    blockquote { margin: 16px 0; padding: 10px 14px; border-left: 3px solid #e0a100; background: #fff9e8; color: #493d20; }
+    a { color: #075aa8; text-decoration: underline; text-underline-offset: 3px; }
+    code { white-space: pre-wrap; overflow-wrap: anywhere; }
+    @media (min-width: 720px) { main { padding: 24px; } article { padding: 34px 38px 52px; } }
+    @media print { .toolbar, .status { display: none; } body { background: #fff; } main { width: 100%; padding: 0; } article { border: 0; } }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <strong>AI 智能体开始自己找工具、自己部署，但也更容易泄密了</strong>
+    <button type="button" data-copy-target="wechat-content" onclick="copyArticle()">复制公众号正文</button>
+  </div>
+  <div class="status" id="copy-status" role="status" aria-live="polite">审核来源和日期后，再粘贴到公众号助手。</div>
+  <main>
+    <article id="wechat-content"><h1>AI 智能体开始自己找工具、自己部署，但也更容易泄密了</h1>
+<blockquote>
+<p>这份日报覆盖 6 月 18 日至 21 日的重要进展。今天没有可靠的新视频或图片大模型发布，所以不硬凑；真正值得看的主线，是智能体正在从“会回答”走向“会找工具、会部署、会连续完成任务”。与此同时，隐私、版权和使用边界也变得更具体。</p>
+</blockquote>
+<h2>标题候选</h2>
+<ul>
+<li>AI 智能体开始自己找工具、自己部署，但也更容易泄密了</li>
+<li>原来 AI 已经能自己找工具了：今天值得看的 8 条进展</li>
+<li>AI 不只会聊天了：自动部署、工具发现和隐私风险同时到来</li>
+</ul>
+<h2>今日速览</h2>
+<ol>
+<li><strong>Cloudflare 给 AI 智能体提供 60 分钟临时账户</strong>：智能体可以先部署网站或接口，再决定是否注册和保留。</li>
+<li><strong>MosaicLeaks 揭示研究型智能体的“拼图式泄密”</strong>：单条搜索看似无害，多条查询拼起来却可能暴露私有文件内容。</li>
+<li><strong>Hugging Face 推出智能体资源发现机制</strong>：智能体可以按任务搜索 Skills、MCP 服务和应用，而不是预先塞入全部工具。</li>
+<li><strong>国产开源模型 GLM-5.2 主打 100 万上下文和长任务</strong>：重点不只是装下更多文字，而是持续执行复杂任务。</li>
+<li><strong>ChatGPT 的健康问答能力继续增强</strong>：OpenAI 称 GPT-5.5 Instant 改善了健康问题中的推理、上下文理解和表达。</li>
+<li><strong>AI 辅助罕见病诊断出现新案例</strong>：研究人员报告，推理模型帮助医生在未解决病例中识别出 18 个新诊断。</li>
+<li><strong>“工具是否适合智能体使用”开始被单独评测</strong>：清晰文档、命令行入口和 Skills 会明显影响智能体成本与成功率。</li>
+<li><strong>AI 让内容搬运和伪装原创变得更便宜</strong>：一整本书被复制、换成 AI 图片并用于引流，版权与来源核验更重要。</li>
+</ol>
+<h2>重点一：AI 做完网站后，可以自己先部署出来</h2>
+<p>Cloudflare 发布了面向 AI 智能体的临时账户。使用新版 Wrangler 时，智能体可以运行 <code>wrangler deploy --temporary</code>，不先注册 Cloudflare 账户，就把网站、API 或智能体部署到一个临时地址。部署在 60 分钟内有效；人可以打开认领链接，把它转成正式账户，未认领则自动删除。</p>
+<p>这件事对普通人的意义，不是大家都要学习 Cloudflare，而是 AI 建站正在补上最后一段流程。以前 AI 能写页面，却常常卡在注册、登录、复制令牌和部署；现在它可以先把结果放到网上，让你直接用手机打开检查。对于活动页、个人介绍页、问卷原型和产品演示，这种“先看到结果，再决定保留”的方式很实用。</p>
+<p><strong>普通用户可以这样尝试：</strong></p>
+<ol>
+<li>准备一个不含隐私的小需求，例如个人作品展示页或活动报名页。</li>
+<li>使用支持终端操作的编码智能体，让它生成页面并采用 Cloudflare 临时部署。</li>
+<li>打开返回的预览地址，检查手机显示、链接和文字。</li>
+<li>确认值得保留后，再认领账户；不满意就让临时部署到期删除。</li>
+</ol>
+<p><strong>可复制提示词：</strong></p>
+<blockquote>
+<p>请制作一个适合手机浏览的单页网站，主题是“我的 AI 学习记录”。包含标题、三项学习成果、一个联系方式区域。不要使用外部数据库，也不要放真实隐私信息。完成后使用 Cloudflare Wrangler 的临时部署功能发布，返回预览地址，并检查页面能否正常打开。</p>
+</blockquote>
+<p><strong>入口与限制：</strong> <a href="https://blog.cloudflare.com/temporary-accounts/" rel="noopener noreferrer" target="_blank">Cloudflare 官方说明</a>。它仍需要编码智能体和命令行环境，不等于完全无门槛建站；临时部署只有 60 分钟，也不应直接承载敏感数据或正式业务。</p>
+<h2>重点二：让 AI 读私有文档再联网搜索，可能在搜索词里泄密</h2>
+<p>ServiceNow 与研究者发布了 MosaicLeaks，用来测试“深度研究智能体”在私有文件和公开网络之间来回检索时是否泄密。风险并不一定是一条搜索词直接写出机密，而是智能体连续搜索公司名、内部日期、指标和供应商后，旁观者能够把这些碎片重新拼成私有事实。</p>
+<p>研究包含 1001 条多步骤任务链。论文报告，在一个测试设置中，仅针对任务表现训练会把严格任务成功率从 48.7% 提升到 59.3%，但泄漏率也从 34.0% 升到 51.7%；加入隐私奖励后，成功率达到 58.7%，同时把相关泄漏降到 9.9%。这些数字来自研究测试，不代表所有产品的日常泄漏率，但方向非常明确：智能体越会主动搜索，越需要限制它带出去的信息。</p>
+<p><strong>普通用户可以这样做：</strong></p>
+<ol>
+<li>不要把身份证、合同原文、未公开财务数据直接交给可联网智能体。</li>
+<li>先把公司名、人名、日期和金额替换成代号，再让 AI 做资料研究。</li>
+<li>私有资料总结和公开网络搜索分成两个会话，必要时关闭联网功能。</li>
+<li>如果工具提供查询日志，发布结果前检查它向外搜索过什么。</li>
+</ol>
+<p><strong>可复制提示词：</strong></p>
+<blockquote>
+<p>在联网搜索前，先检查我的材料中是否包含姓名、单位、客户、金额、内部日期、账号或其他可识别信息。把风险字段列出来并用占位符替换。未经我确认，不得把这些字段写入搜索词、网址参数或外部工具调用。</p>
+</blockquote>
+<p><strong>入口与限制：</strong> <a href="https://huggingface.co/blog/ServiceNow/mosaicleaks" rel="noopener noreferrer" target="_blank">MosaicLeaks 研究说明</a>。仅靠提示词不能彻底解决泄漏，真正敏感的任务仍需使用明确的数据隔离、权限控制和本地处理。</p>
+<h2>重点三：智能体以后可能像搜索网页一样搜索“可用工具”</h2>
+<p>Hugging Face 介绍了 Agentic Resource Discovery（ARD）：工具发布者可以提供 <code>ai-catalog.json</code> 清单，注册服务则通过搜索接口返回符合任务的 Skills、MCP 服务或其他能力。Hugging Face 的 Discover Tool 已经提供参考实现，并可搜索 Hub 上的应用和 MCP 服务。</p>
+<p>这解决了智能体的一类现实问题：工具太多时，不可能把全部说明都塞进上下文，也不可能让用户提前逐个安装。新的思路是让智能体先理解任务，再临时搜索“图片生成”“语音转写”“文档处理”等能力。对普通人来说，这意味着未来不必记住一长串产品名，只需描述想完成什么，智能体负责寻找合适工具。</p>
+<p><strong>可以这样理解和尝试：</strong></p>
+<ul>
+<li>想生成图片时，让智能体搜索可用的图片生成 MCP 服务。</li>
+<li>想转写录音时，让它先找语音转写工具，再说明需要上传什么以及数据会发到哪里。</li>
+<li>想处理表格时，让它比较本地工具与云端服务，先报告权限和费用，再决定调用。</li>
+</ul>
+<p><strong>可复制提示词：</strong></p>
+<blockquote>
+<p>我需要把一段会议录音转成文字并提炼待办事项。请先搜索可用工具，不要立即上传文件。列出每个工具的入口、是否需要账号、是否收费、数据发送位置和适合场景，等待我选择后再执行。</p>
+</blockquote>
+<p><strong>入口与限制：</strong> <a href="https://huggingface.co/blog/agentic-resource-discovery-launch" rel="noopener noreferrer" target="_blank">Hugging Face ARD 说明</a>。该生态仍处于早期阶段；智能体找到工具不代表工具可信，调用前仍需检查发布者、权限、费用和数据去向。</p>
+<h2>其他值得知道的 5 条动态</h2>
+<h3>4. GLM-5.2 把国产开源模型推向更长任务</h3>
+<p>智谱系团队发布 GLM-5.2，提供 100 万 token 上下文、MIT 开源许可和不同推理强度。官方重点强调长时间编码、自动研究和复杂调试。对普通用户更现实的价值，是未来模型处理大型资料库、长期项目记录和多步骤任务时，可能减少反复忘记上下文的问题。基准成绩主要来自发布方，应等待更多独立测试。<a href="https://huggingface.co/blog/zai-org/glm-52-blog" rel="noopener noreferrer" target="_blank">官方介绍</a></p>
+<h3>5. ChatGPT 继续加强健康问题中的推理与表达</h3>
+<p>OpenAI 称 GPT-5.5 Instant 改进了健康与生活方式问题中的推理、上下文理解、表达和医生参与的评估。它适合帮助整理症状时间线、生成就诊问题和解释术语，但不能替代医生诊断，也不适合在紧急情况下作为唯一依据。<a href="https://openai.com/index/improving-health-intelligence-in-chatgpt" rel="noopener noreferrer" target="_blank">OpenAI 官方说明</a></p>
+<h3>6. AI 辅助医生解决罕见病病例</h3>
+<p>OpenAI 报告称，研究人员使用推理模型辅助罕见遗传病诊断，在此前未解决的儿童病例中识别出 18 个新诊断。它展示了 AI 在海量医学线索中提出候选方向的能力，但最终判断仍依赖医生、检测和完整病历。<a href="https://openai.com/index/diagnose-rare-childhood-diseases" rel="noopener noreferrer" target="_blank">OpenAI 官方案例</a></p>
+<h3>7. 工具文档是否“对智能体友好”开始影响成本</h3>
+<p>Hugging Face 用 Transformers 测试智能体操作工具的过程，而不只看最终答案。其案例显示，增加清晰 CLI、Skills 和任务示例后，智能体可能使用更少步骤和 token。对产品和运营人员的启发是：以后选择 AI 工具时，不仅看模型强弱，也要看接口、文档、错误提示和自动化支持是否完整。<a href="https://huggingface.co/blog/is-it-agentic-enough" rel="noopener noreferrer" target="_blank">评测说明</a></p>
+<h3>8. AI 生成内容让版权和来源辨别更难</h3>
+<p>Waxy 报道，一个非官方站点复制了《晦涩悲伤词典》的前言和 311 个词条，换上 AI 图片，并通过联盟链接获利；作者本人表示与该站无关。事件提醒内容创作者：使用 AI 改写、配图或建站，并不会自动获得原作品版权；读者也不能仅凭网站做得精美就判断它是官方来源。<a href="https://waxy.org/2026/06/the-wholesale-plagiarism-of-obscure-sorrows/" rel="noopener noreferrer" target="_blank">调查文章</a></p>
+<h2>今天能得出什么结论</h2>
+<p>今天没有新的“炸裂视频模型”，但 AI 的能力边界确实向前挪了一步：它开始能自己寻找工具、临时部署结果，并在更长任务中持续工作。与此同时，联网搜索会带出什么、调用的工具是否可信、生成内容是否侵犯版权，已经从抽象讨论变成具体使用问题。</p>
+<p>对普通人最实用的策略不是一次开放所有权限，而是让智能体先给方案、列工具和说明风险；确认之后，再用非敏感材料执行一个小任务。这样既能看到 AI 真正能做什么，也不会为了追新功能把自己的数据和判断一起交出去。</p>
+<h2>留给读者的问题</h2>
+<p>如果 AI 可以替你自动寻找并连接工具，你最希望它先帮你完成哪件事：做视频、做图片、整理资料，还是把多个办公软件串起来？</p>
+<h2>发布前核对</h2>
+<ul>
+<li>Cloudflare 临时账户的可用地区、最新限制和 60 分钟规则</li>
+<li>GLM-5.2 的消费者入口、价格和独立评测</li>
+<li>OpenAI 医疗案例的适用范围，避免写成医疗建议</li>
+<li>所有英文工具在中国大陆的访问与支付情况</li>
+</ul></article>
+  </main>
+  <script>
+    async function copyArticle() {
+      const article = document.getElementById("wechat-content");
+      const status = document.getElementById("copy-status");
+      const rich = article.innerHTML;
+      const plain = article.innerText;
+      try {
+        if (navigator.clipboard && window.ClipboardItem) {
+          const item = new ClipboardItem({
+            "text/html": new Blob([rich], { type: "text/html" }),
+            "text/plain": new Blob([plain], { type: "text/plain" })
+          });
+          await navigator.clipboard.write([item]);
+        } else {
+          const range = document.createRange();
+          range.selectNodeContents(article);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          if (!document.execCommand("copy")) {
+            throw new Error("copy command was rejected");
+          }
+          selection.removeAllRanges();
+        }
+        status.dataset.copyState = "success";
+        status.textContent = "已复制，可打开公众号助手粘贴并预览。";
+      } catch (error) {
+        const range = document.createRange();
+        range.selectNodeContents(article);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        status.dataset.copyState = "manual";
+        status.textContent = "浏览器未允许自动复制，正文已选中，请长按复制。";
+      }
+    }
+  </script>
+</body>
+</html>
